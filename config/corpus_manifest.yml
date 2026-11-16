@@ -1,0 +1,342 @@
+# Corpus for the jurisdictional scan assistant. Public filings, plus documents marked access: internal.
+#
+# source_path is relative to the corpus root (local: ./reports or ./interviewer/corpus,
+# workspace: the raw UC volume). .pdf files are parsed per page; .txt files split pages on form feeds.
+# Every source_path is checked against an exclusion list before upload and before parsing; a match
+# aborts the run. The list lives in an interviewer-only file. Add documents here, never by dropping
+# files in the volume.
+#
+# superseded_by: for an application, the AUC decision that rules on it (approved != applied).
+
+documents:
+  # --- Alberta regulator / system operator -------------------------------------------
+  - doc_id: auc_24116_dsi_final_report
+    title: Distribution System Inquiry Final Report
+    publisher: Alberta Utilities Commission
+    utility: null
+    jurisdiction: Alberta
+    doc_type: research
+    proceeding: "24116"
+    date: "2021-02-19"
+    language: en
+    source_path: "24116_X[]_Distribution System Inquiry - Final Report_000839 (1).pdf"
+  - doc_id: aeso_ddr_guideline_2021
+    title: Distribution Deficiency Report (DDR) Guideline
+    publisher: Alberta Electric System Operator
+    utility: null
+    jurisdiction: Alberta
+    doc_type: guideline
+    proceeding: null
+    date: "2021-03-31"
+    language: en
+    source_path: "Distribution-Deficiency-Report-DDR-Guideline.pdf"
+  - doc_id: aeso_pod_interconnection_guideline
+    title: Distribution Point-of-Delivery Interconnection Process Guideline - Standards of Service (AESO-AUC-2019JUL18-002 Attachment 1)
+    publisher: Alberta Electric System Operator
+    utility: null
+    jurisdiction: Alberta
+    doc_type: guideline
+    proceeding: null
+    date: "2015-05-04"  # date EPCOR filed it as Appendix A-4; the guideline itself is undated
+    language: en
+    source_path: "AESO-AUC-2019JUL18-002 Attachment 1.pdf"
+  - doc_id: auc_decision_26615_d01_2022
+    title: Decision 26615-D01-2022 - ATCO Electric Ltd. and FortisAlberta Inc. 2023 Cost-of-Service Review
+    publisher: Alberta Utilities Commission
+    utility: ATCO Electric; FortisAlberta
+    jurisdiction: Alberta
+    doc_type: decision
+    proceeding: "26615"
+    date: "2022-07-28"
+    language: en
+    source_path: "ATCO and Fortis 2023 Cost-of-Service Review_000574.pdf"
+  - doc_id: auc_decision_26617_d02_2022
+    title: Decision 26617-D02-2022 - ENMAX and EPCOR 2023 Cost-of-Service Review - Reasons for Approval of Negotiated Settlements
+    publisher: Alberta Utilities Commission
+    utility: ENMAX; EPCOR
+    jurisdiction: Alberta
+    doc_type: decision
+    proceeding: "26617"
+    date: "2022-07-28"
+    language: en
+    source_path: "ENMAX and EPCOR 2023 COS Review - Reasons for Approval of NSAs_000292.pdf"
+
+  # --- Alberta utility applications ---------------------------------------------------
+  - doc_id: atco_2023_cos_application
+    title: ATCO Electric 2023 Cost-of-Service Review Application
+    publisher: ATCO Electric
+    utility: ATCO Electric
+    jurisdiction: Alberta
+    doc_type: application
+    proceeding: "26615"
+    date: "2021-11-15"
+    language: en
+    superseded_by: auc_decision_26615_d01_2022
+    source_path: "ATCO Electric 2023 Cost-of-Service Application_000033.pdf"
+  - doc_id: fortis_2023_cos_application
+    title: FortisAlberta Inc. 2023 Cost of Service Application
+    publisher: FortisAlberta
+    utility: FortisAlberta
+    jurisdiction: Alberta
+    doc_type: application
+    proceeding: "26615"
+    date: "2021-11-15"
+    language: en
+    superseded_by: auc_decision_26615_d01_2022
+    source_path: "FortisAB 2023 Cost of Service Application_000042.pdf"
+  - doc_id: fortis_2023_cos_app_b_software
+    title: FortisAlberta 2023 COS Application - Appendix B - Software - Major Applications
+    publisher: FortisAlberta
+    utility: FortisAlberta
+    jurisdiction: Alberta
+    doc_type: application
+    proceeding: "26615"
+    date: "2021-11-15"
+    language: en
+    superseded_by: auc_decision_26615_d01_2022
+    source_path: "26615_X0034_Appendix B - Software - Major Applications_000045.pdf"
+  - doc_id: fortis_2023_cos_app_d_ami
+    title: FortisAlberta 2023 COS Application - Appendix D - Advanced Metering Infrastructure Business Case (Redacted)
+    publisher: FortisAlberta
+    utility: FortisAlberta
+    jurisdiction: Alberta
+    doc_type: application
+    proceeding: "26615"
+    date: "2021-11-15"
+    language: en
+    superseded_by: auc_decision_26615_d01_2022
+    source_path: "26615_X0036_Appendix D - AMI Business Case - Redacted_000047.pdf"
+  - doc_id: fortis_2023_cos_app_g_dsm
+    title: FortisAlberta 2023 COS Application - Appendix G - Demand Side Management
+    publisher: FortisAlberta
+    utility: FortisAlberta
+    jurisdiction: Alberta
+    doc_type: application
+    proceeding: "26615"
+    date: "2021-11-15"
+    language: en
+    superseded_by: auc_decision_26615_d01_2022
+    source_path: "26615_X0039_Appendix G - Demand Side Management Program DSM_000050.pdf"
+  - doc_id: enmax_2023_cos_application
+    title: ENMAX Power Corporation 2023 Distribution Cost of Service Application
+    publisher: ENMAX Power Corporation
+    utility: ENMAX
+    jurisdiction: Alberta
+    doc_type: application
+    proceeding: "26617"
+    date: "2022-01-17"
+    language: en
+    superseded_by: auc_decision_26617_d02_2022
+    source_path: "ENMAX 2023 Distribution Cost-of-Service Application_000027.pdf"
+  - doc_id: p26617_app_e_dsm
+    title: Proceeding 26617 - Appendix E - Demand Side Management Supplemental Information
+    publisher: ENMAX Power Corporation
+    utility: ENMAX
+    jurisdiction: Alberta
+    doc_type: application
+    proceeding: "26617"
+    date: "2022-01-17"
+    language: en
+    superseded_by: auc_decision_26617_d02_2022
+    source_path: "26617_X0027_Appendix E Demand Side Management Supplemental Information_000032.pdf"
+  - doc_id: p26617_app_i_ami
+    title: Proceeding 26617 - Appendix I - Advanced Metering Infrastructure Project Business Case
+    publisher: ENMAX Power Corporation
+    utility: ENMAX
+    jurisdiction: Alberta
+    doc_type: application
+    proceeding: "26617"
+    date: "2022-01-17"
+    language: en
+    superseded_by: auc_decision_26617_d02_2022
+    source_path: "26617_X0031_Appendix I AMI Project Business Case_000036.pdf"
+  - doc_id: epcor_2023_phase1_dta_blackline
+    title: EPCOR 2023 Phase I Distribution Tariff Application - Blackline
+    publisher: EPCOR Distribution & Transmission
+    utility: EPCOR
+    jurisdiction: Alberta
+    doc_type: application
+    proceeding: "26617"
+    date: "2022-01-17"
+    language: en
+    superseded_by: auc_decision_26617_d02_2022
+    source_path: "EPCOR 2023 Phase I Distribution Tariff Application- Blackline_000083.pdf"
+
+  # --- Hawaii --------------------------------------------------------------------------
+  - doc_id: hawaii_grid_mod_strategy_2017
+    title: Modernizing Hawai'i's Grid For Our Customers - Grid Modernization Strategy
+    publisher: Hawaiian Electric Companies
+    utility: Hawaiian Electric
+    jurisdiction: Hawaii
+    doc_type: plan
+    proceeding: "2017-0226"
+    date: "2017-08-29"
+    language: en
+    source_path: "hawaii grid modernization plan - final_august_2017_grid_modernization_strategy.pdf"
+  - doc_id: hawaii_grid_mod_phase1_application
+    title: Grid Modernization Phase 1 Implementation Plan (Application)
+    publisher: Hawaiian Electric Companies
+    utility: Hawaiian Electric
+    jurisdiction: Hawaii
+    doc_type: application
+    proceeding: "2018-0141"
+    date: "2018-06-21"
+    language: en
+    source_path: "hawaii phase 1 implementation plan grid modernization.pdf"
+  - doc_id: hawaii_grid_mod_phase2_application
+    title: Grid Modernization Phase 2 Implementation Plan (Updated Application - ADMS and Field Devices)
+    publisher: Hawaiian Electric Companies
+    utility: Hawaiian Electric
+    jurisdiction: Hawaii
+    doc_type: application
+    proceeding: "2019-0327"
+    date: "2021-03-31"
+    language: en
+    source_path: "hawaii phsae 2 implementation plan grid modernizatoin.pdf"
+  - doc_id: hawaii_puc_grid_mod_order
+    title: Order No. 34281 - Dismissing the Smart Grid Foundation Project Application and Providing Guidance for a Grid Modernization Strategy
+    publisher: Hawaii Public Utilities Commission
+    utility: Hawaiian Electric
+    jurisdiction: Hawaii
+    doc_type: order
+    proceeding: "2016-0087"
+    date: "2017-01-04"
+    language: en
+    source_path: "hawaii - regulator order for grid mod plan.pdf"
+  - doc_id: hawaii_cer_strategy_2021
+    title: Customer Energy Resources for Hawai'i - A Customer-First CER Strategy
+    publisher: Hawaiian Electric
+    utility: Hawaiian Electric
+    jurisdiction: Hawaii
+    doc_type: plan
+    proceeding: null
+    date: "2021-05-01"
+    language: en
+    source_path: "hawaii customer energy resources strategy may 2021.pdf"
+
+  # --- Other utilities -----------------------------------------------------------------
+  - doc_id: central_hudson_dsip_2020
+    title: Central Hudson Distributed System Implementation Plan (DSIP)
+    publisher: Central Hudson Gas & Electric
+    utility: Central Hudson
+    jurisdiction: New York
+    doc_type: plan
+    proceeding: null
+    date: "2020-06-30"
+    language: en
+    source_path: "Central Hudson DSIP.pdf"
+  - doc_id: hq_strategic_plan_2022_2026_en
+    title: Hydro-Quebec Strategic Plan 2022-2026
+    publisher: Hydro-Quebec
+    utility: Hydro-Quebec
+    jurisdiction: Quebec
+    doc_type: plan
+    proceeding: null
+    date: "2022-01-01"
+    language: en
+    source_path: "Hydro Quebec strategic-plan.pdf"
+  - doc_id: hq_strategic_plan_2022_2026_fr
+    title: Hydro-Quebec Plan strategique 2022-2026
+    publisher: Hydro-Quebec
+    utility: Hydro-Quebec
+    jurisdiction: Quebec
+    doc_type: plan
+    proceeding: null
+    date: "2022-01-01"
+    language: fr
+    source_path: "plan-strategique-hydro-quebec-2022-2026.pdf"
+  - doc_id: smud_strategic_plan_2020_2024
+    title: SMUD 5-Year Strategic Plan 2020-2024
+    publisher: Sacramento Municipal Utility District
+    utility: SMUD
+    jurisdiction: California
+    doc_type: plan
+    proceeding: null
+    date: "2020-01-01"
+    language: en
+    source_path: "SMUD 5-Year-Strategic-Plan.pdf"
+  - doc_id: pge_portland_grid_white_paper
+    title: A Modernized Grid - The Platform for a Clean Energy Future
+    publisher: Portland General Electric
+    utility: Portland General Electric
+    jurisdiction: Oregon
+    doc_type: research
+    proceeding: null
+    date: null
+    language: en
+    source_path: "pge-smart-grid-white-paper.pdf"
+
+  # --- Research / industry -------------------------------------------------------------
+  - doc_id: irec_grid_mod_playbook_v1
+    title: A Playbook for Modernizing the Distribution Grid - Volume 1 - Goals, Principles and Plan Evaluation Checklist
+    publisher: Interstate Renewable Energy Council
+    utility: null
+    jurisdiction: United States
+    doc_type: guideline
+    proceeding: null
+    date: null
+    language: en
+    source_path: "Grid-Modernization-Playbook-report-1.pdf"
+  - doc_id: brattle_grid_mod_forum_2019
+    title: "Grid Modernization: Policy, Market Trends and Directions Forward"
+    publisher: The Brattle Group
+    utility: null
+    jurisdiction: United States
+    doc_type: research
+    proceeding: null
+    date: "2019-05-21"
+    language: en
+    source_path: "16411_grid_modernization_-_policy_market_trends_and_directions_forward.pdf"
+  - doc_id: epri_consumers_grid_mod_assessment
+    title: Consumers Energy Grid Modernization Roadmap Assessment
+    publisher: EPRI
+    utility: Consumers Energy
+    jurisdiction: Michigan
+    doc_type: research
+    proceeding: null
+    date: "2021-04-01"
+    language: en
+    source_path: "3002021433_Consumers Energy Grid Modernization Roadmap Assessment.pdf"
+  - doc_id: epri_der_value_grid_mod
+    title: Maximizing Distributed Energy Resource Value Through Grid Modernization
+    publisher: EPRI
+    utility: null
+    jurisdiction: United States
+    doc_type: research
+    proceeding: null
+    date: null
+    language: en
+    source_path: "3002023235_Maximizing Distributed Energy Resource Value Through Grid Modernization.pdf"
+  - doc_id: lbnl_1006395_irp_load_forecasting
+    title: Load Forecasting in Electric Utility Integrated Resource Planning (LBNL-1006395)
+    publisher: Lawrence Berkeley National Laboratory
+    utility: null
+    jurisdiction: United States
+    doc_type: research
+    proceeding: null
+    date: "2016-10-01"
+    language: en
+    source_path: "lbnl-1006395.pdf"
+  # --- Internal -------------------------------------------------------------------------
+  - doc_id: internal_northgate_engagement_notes
+    title: Northgate Power Cooperative - Grid Modernization Advisory - Engagement Notes
+    publisher: Internal advisory team
+    utility: Northgate Power Cooperative
+    jurisdiction: Alberta
+    doc_type: plan
+    proceeding: null
+    date: "2025-09-12"
+    language: en
+    access: internal
+    source_path: "internal_northgate_engagement_notes.txt"
+
+  - doc_id: pnnl_nrel_climate_variability_forecasting
+    title: Load Forecasting with Climate Variability for Transmission and Distribution System Planning
+    publisher: NREL; PNNL
+    utility: null
+    jurisdiction: United States
+    doc_type: research
+    proceeding: null
+    date: "2021-11-01"
+    language: en
+    source_path: "combined_pnnl_and_nrel_load_and_der_forecasting_ncep_fin.pdf"

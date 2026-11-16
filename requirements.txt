@@ -1,0 +1,7 @@
+# Runtime deps for notebooks/jobs (installed with %pip in each notebook) and local tests.
+databricks-sdk==0.152.0
+mlflow[databricks]>=3.17,<4
+openai>=1.100,<3
+httpx>=0.27  # databricks-sdk get_open_ai_client imports it; recent openai releases no longer pull it in
+pypdf>=6.0,<7
+pyyaml>=6.0
